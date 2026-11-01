@@ -6,7 +6,7 @@ enum TopicData {
 
     // MARK: - 分类
 
-    static let categories: [ContentCategory] = [dailyEnglish, businessEnglish]
+    static let categories: [ContentCategory] = [dailyEnglish, businessEnglish, travelEnglish]
 
     static let dailyEnglish = ContentCategory(
         id: "daily",
@@ -31,6 +31,19 @@ enum TopicData {
             businessIntroSection,
             businessCommSection,
             businessSmallTalkSection,
+        ]
+    )
+
+    static let travelEnglish = ContentCategory(
+        id: "travel",
+        nameCN: "旅游英语",
+        nameEN: "Travel English",
+        icon: "airplane",
+        sections: [
+            travelTransportSection,
+            travelStaySection,
+            travelFoodSection,
+            travelFunSection,
         ]
     )
 

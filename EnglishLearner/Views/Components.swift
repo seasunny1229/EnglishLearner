@@ -62,6 +62,11 @@ extension ContentCategory {
                 colors: [Color.teal, Color.blue],
                 startPoint: .topLeading, endPoint: .bottomTrailing
             )
+        case "travel":
+            LinearGradient(
+                colors: [Color.orange, Color.pink],
+                startPoint: .topLeading, endPoint: .bottomTrailing
+            )
         default:
             LinearGradient(
                 colors: [Color.indigo, Color.purple],
@@ -71,6 +76,10 @@ extension ContentCategory {
     }
 
     var themeColor: Color {
-        id == "daily" ? .teal : .indigo
+        switch id {
+        case "daily": .teal
+        case "travel": .orange
+        default: .indigo
+        }
     }
 }
